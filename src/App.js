@@ -72,9 +72,7 @@ const App = () => {
           <div className="logo">
             <img
               id="logo"
-              src={
-                darkMode ? "/images/logo-white.svg" : "/images/logo-black.svg"
-              }
+              src={darkMode ? "/logo-white.svg" : "/logo-black.svg"}
               alt="Logo"
             />
           </div>
@@ -107,7 +105,6 @@ const App = () => {
           </nav>
         </div>
       </header>
-      <h1>Welcome to My Portfolio</h1>
     </div>
   );
 };
