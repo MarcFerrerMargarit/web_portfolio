@@ -1,9 +1,54 @@
-# Getting Started with Create React App
+# Web Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This project is a personal web portfolio developed using React. The aim of this project is to provide a platform where you can showcase your skills, experience, and projects. The portfolio features a light and dark theme switcher, a responsive design that adapts to different screen sizes, and a download button for your CV.
 
+## Features
+
+- **Responsive Design**: Adapts to different screen sizes for a seamless user experience across all devices.
+- **Theme Switcher**: Allows users to switch between light and dark themes.
+- **Dynamic Favicon and Logo**: Changes based on the selected theme.
+- **Download CV Button**: Provides a direct link to download your CV.
+- **React Icons**: Utilizes React Icons for a modern and visually appealing design.
+
+## Project Structure
+
+```
+web_portfolio/
+├── public/
+│ ├── images/
+│ │ ├── logo-black.svg
+│ │ ├── logo-white.svg
+│ ├── favicon-light.ico
+│ ├── favicon-dark.ico
+│ ├── index.html
+├── src/
+│ ├── App.css
+│ ├── App.js
+│ ├── index.js
+├── .github/
+│ ├── workflows/
+│ │ ├── deploy.yml
+├── package.json
+├── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm (v6 or later)
+
+### Installation
+
+**Clone the repository**:
+   ```bash
+   git clone https://github.com/MarcFerrerMargarit/web_portfolio.git
+   cd web_portfolio
+   npm install
+   ```
 In the project directory, you can run:
 
 ### `npm start`
