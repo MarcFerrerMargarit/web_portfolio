@@ -32,9 +32,11 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git fetch origin
+          git stash
           git checkout gh-pages || git checkout -b gh-pages
           git reset --hard origin/gh-pages
           git clean -fd
+          git stash pop || echo "Nothing to pop from stash"
           cp -r build/* .
           git add .
           git commit -m "Deploy to GitHub Pages"
