@@ -55,14 +55,14 @@ const App = () => {
   const changeFavicon = (theme) => {
     const favicon = document.getElementById("favicon");
     if (theme === "dark") {
-      favicon.href = "/favicon-dark.ico";
+      favicon.href = process.env.PUBLIC_URL + "/favicon-dark.ico";
     } else {
-      favicon.href = "/favicon-light.ico";
+      favicon.href = process.env.PUBLIC_URL + "/favicon-light.ico";
     }
   };
 
   const downloadCV = () => {
-    window.location.href = "/cv/cv.pdf"; // Update with the actual path to your CV
+    window.location.href = process.env.PUBLIC_URL + "/cv/cv.pdf"; // Update with the actual path to your CV
   };
 
   return (
@@ -72,7 +72,11 @@ const App = () => {
           <div className="logo">
             <img
               id="logo"
-              src={darkMode ? "/logo-white.svg" : "/logo-black.svg"}
+              src={
+                darkMode
+                  ? process.env.PUBLIC_URL + "/images/logo-white.svg"
+                  : process.env.PUBLIC_URL + "/images/logo-black.svg"
+              }
               alt="Logo"
             />
           </div>
