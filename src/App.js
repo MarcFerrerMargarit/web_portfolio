@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 import "./App.css";
+import Typical from "react-typical";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -109,6 +110,25 @@ const App = () => {
           </nav>
         </div>
       </header>
+      <div className="main-content">
+        <div className="text-content">
+          <h1>Hi, I'm Marc Ferrer Margarit</h1>
+          <div className="job-titles">
+            <Typical
+              steps={[
+                'Software Architect', 2000,
+                'Software Developer', 2000,
+                'Software Engineer', 2000,
+              ]}
+              loop={Infinity}
+              wrapper="p"
+            />
+          </div>
+        </div>
+        <div className="image-content">
+          <img src= {process.env.PUBLIC_URL + "/images/programmer.png"} alt="Marc Ferrer Margarit" />
+        </div>
+      </div>
     </div>
   );
 };

@@ -30,6 +30,7 @@ body {
 h1 {
   font-family: "Kanit", sans-serif;
   color: var(--primary-light);
+  font-size: 2.5rem;
   transition: color 0.3s;
 }
 
@@ -43,7 +44,6 @@ header {
   align-items: center;
   padding: 1rem;
   background-color: var(--background-light);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
@@ -125,6 +125,45 @@ header nav ul li.separator {
   color: var(--secondary-dark);
 }
 
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.text-content {
+  flex: 1;
+  margin-right: 2rem; /* Space between text and image */
+  text-align: left;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-content .job-titles {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  /* Remove border-radius to make the image rectangular */
+}
+
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
@@ -142,5 +181,29 @@ header nav ul li.separator {
 
   header nav ul li.separator {
     display: none;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content,
+  .image-content {
+    flex: unset;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content .job-titles {
+    font-size: 1.25rem;
+  }
+
+  .text-content {
+    margin-right: 0; /* Remove right margin for smaller screens */
   }
 }
